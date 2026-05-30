@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cdrive - Driving School Website</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Material Symbols (for mobile menu icon) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="../../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css">
+    <!-- Bootstrap 5 (Local) -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Compiled CSS (includes Custom SCSS) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Lenis Smooth Scroll -->
+    <script src="../../unpkg.com/lenis%401.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+            <span class="preloader__text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Offcanvas Side Info -->
+    <aside class="fix">
+        <div class="side-info">
+            <div class="side-info-content">
+                <!-- Header -->
+                <div class="offset-widget offset-header side-info__item">
+                    <div class="offset-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Cdrive Logo">
+                        </a>
+                    </div>
+                    <button id="side-info-close" class="side-info-close">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <!-- Mobile Navigation -->
+                <div class="offset-widget-box side-info__item">
+                    <nav class="mobile-nav">
+                        <ul class="mobile-nav__list">
+                            <li class="mobile-nav__item mobile-nav__item--has-children">
+                                <a href="index.html" class="mobile-nav__link">Home
+                                    <span class="mobile-nav__arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <ul class="mobile-nav__sub">
+                                    <li><a href="index.html">Home 1</a></li>
+                                    <li><a href="index2.html">Home 2</a></li>
+                                    <li><a href="index3.html">Home 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--has-children">
+                                <a href="contact.html" class="mobile-nav__link">Pages
+                                    <span class="mobile-nav__arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <ul class="mobile-nav__sub">
+                                    <li><a href="project.html">Projects</a></li>
+                                    <li><a href="project-details.html">Project Details</a></li>
+                                    <li><a href="service.html">Service</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                    <li><a href="course.html">Course</a></li>
+                                    <li><a href="course-details.html">Course Details</a></li>
+                                    <li><a href="team.html">Team</a></li>
+                                    <li><a href="team-details.html">Team Details</a></li>
+                                    <li><a href="pricing.html">Pricing</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__item mobile-nav__item--has-children">
+                                <a href="blog.html" class="mobile-nav__link">Blog
+                                    <span class="mobile-nav__arrow"><i class="fa-solid fa-chevron-down"></i></span>
+                                </a>
+                                <ul class="mobile-nav__sub">
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a href="contact.html" class="mobile-nav__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Info Text -->
+                <div class="offset-info-box side-info__item">
+                    <h2 class="title">Hello There!</h2>
+                    <p class="text">Learn to drive with confidence. Our expert instructors are here to guide you every
+                        step of the way.</p>
+                </div>
+                <!-- Contact Details -->
+                <div class="offset-widget-box side-info__item">
+                    <h2 class="title">Contact Info</h2>
+                    <div class="contact-meta">
+                        <div class="contact-item">
+                            <span class="text"><a href="tel:+14155550127">(415) 555-0127</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="text"><a href="mailto:info@cdrive.com">info@cdrive.com</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="text">123 Drive Street, California</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Links -->
+                <div class="offset-widget-box side-info__item">
+                    <h2 class="title">Follow Us</h2>
+                    <div class="social-links">
+                        <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="offcanvas-overlay"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header-area-1">
+        <!-- Row 1: Logo, Contacts, Search -->
+        <div class="header-top-tier d-none d-xl-block">
+            <div class="header-top-tier__bg">
+                <img src="assets/images/header/header1-top-bgshape1_1.png" alt="shape">
+            </div>
+            <div class="header-top-tier__shape-left">
+                <img src="assets/images/header/header1-top-shape1_21.png" alt="shape">
+            </div>
+            <div class="header-top-tier__shape-right">
+                <img src="assets/images/header/header1-top-shape1_2.png" alt="shape">
+            </div>
+            <div class="container">
+                <div class="header-top-tier__inner">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Cdrive Logo">
+                        </a>
+                    </div>
+
+                    <div class="header-contact">
+                        <div class="header-contact__item">
+                            <div class="header-contact__icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="header-contact__info">
+                                <a href="tel:+923076806860">+ 92 ( 307 ) 68 - 06860</a>
+                            </div>
+                        </div>
+                        <div class="header-contact__item">
+                            <div class="header-contact__icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="header-contact__info">
+                                <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-search">
+                        <form action="#">
+                            <div class="header-search__box">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder="Search here">
+
+                                <button type="submit" class="theme__btn">
+                                    <span class="theme__btn-text">SEARCH</span>
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    <span class="theme__btn-shape">
+                                        <img src="assets/images/shape/btn-shape-small.png" alt="shape">
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Socials, Menu, Auth -->
+        <div class="header-bottom-tier header-sticky">
+            <div class="container">
+                <div class="header-bottom-tier__inner">
+                    <div class="header-socials">
+                        <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+
+                    <div class="header-nav">
+                        <nav class="main-menu">
+                            <ul>
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">HOME</a>
+                                    <ul class="dp-menu">
+                                        <li><a href="index.html">Home 1</a></li>
+                                        <li><a href="index2.html">Home 2</a></li>
+                                        <li><a href="index3.html">Home 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="contact.html">PAGES</a>
+                                    <ul class="dp-menu">
+                                        <li><a href="project.html">Projects</a></li>
+                                        <li><a href="project-details.html">Project Details</a></li>
+                                        <li><a href="service.html">Service</a></li>
+                                        <li><a href="service-details.html">Service Details</a></li>
+                                        <li><a href="course.html">Course</a></li>
+                                        <li><a href="course-details.html">Course Details</a></li>
+                                        <li><a href="team.html">Team</a></li>
+                                        <li><a href="team-details.html">Team Details</a></li>
+                                        <li><a href="pricing.html">Pricing</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-item-has-children">
+                                    <a href="blog.html">BLOG</a>
+                                    <ul class="dp-menu">
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header-auth">
+                        <a href="contact.html">LOGIN / REGISTER</a>
+                    </div>
+
+                    <!-- Mobile Hamburger -->
+                    <div class="header-offcanvas d-lg-none">
+                        <button class="side-toggle">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                    <div class="header-logo d-lg-none d-flex">
+                        <a href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Cdrive Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="hero1 section-padding fix">
+            <div class="container">
+                <div class="row gy-5 d-flex align-items-center">
+                    <div class="col-lg-5">
+                        <div class="hero1__content">
+                            <span class="hero1__subtitle"> <span> Welcome to Our Cdrive </span></span>
+                            <h1 class="hero1__title">Learn to <br> Drive From the Professional</h1>
+                            <p class="hero1__description">Looking to refresh your skills, our team of experienced
+                                instructors will guide you every step of the way. Our com prhe ..</p>
+                            <a href="pricing.html" class="theme__btn">
+                                <span class="theme__btn-text">Get Started</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="theme__btn-shape">
+                                    <img src="assets/images/shape/btn-shape.png" alt="shape">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="hero1__image-box">
+                            <div class="hero1__main-img">
+                                <img src="assets/images/hero/her-thumb1_1.png" alt="Hero Image" data-speed="0.8">
+                            </div>
+                            <div class="hero1__thumb-shape">
+                                <img src="assets/images/hero/hero-thumb-shape.png" alt="shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Courses Section -->
+        <section class="trending-courses1">
+            <div class="container-fluid">
+                <div class="trending-courses1__wrap section-padding fix">
+                    <div class="container">
+                        <div class="section-top text-center wow animate__animated animate__fadeInUp"
+                            data-wow-delay="0.2s">
+                            <span class="section-top__subtitle text-white">&gt;&gt;&gt; TRENDING COURSES
+                                &lt;&lt;&lt;</span>
+                            <h2 class="section-top__title text-white">Popular Driving Courses</h2>
+                        </div>
+
+                        <div class="row gy-4">
+                            <!-- Card 1 -->
+                            <div class="col-xl-4 col-md-6 col-12 wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.2s">
+                                <div class="trending-courses1__card-wrap">
+                                    <div class="trending-courses1__card">
+                                        <div class="trending-courses1__card-top">
+                                            <div class="trending-courses1__card-icon">
+                                                <img src="assets/images/courses/courses-icon1_1.png" alt="Safety Icon">
+                                            </div>
+                                            <div class="trending-courses1__card-thumb">
+                                                <img src="assets/images/courses/course-thumb1_1.png"
+                                                    alt="Safety Measures">
+                                            </div>
+                                        </div>
+                                        <div class="trending-courses1__card-content">
+                                            <h3 class="trending-courses1__card-title">Safety Measures</h3>
+                                            <p class="trending-courses1__card-description">Refresh your skill, our team
+                                                experienced instructors will guide you every step of the way. Our com
+                                                prehensive ..</p>
+                                        </div>
+                                    </div>
+                                    <a href="course-details.html" class="trending-courses1__card-button">
+                                        <span class="trending-courses1__btn-label">
+                                            <span class="trending-courses1__btn-text">MORE DETAILS</span>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </span>
+                                        <span class="trending-courses1__btn-chevrons">
+                                            <img src="assets/images/courses/btn-shape.png" alt="shape">
+                                            <img src="assets/images/courses/btn-shape2.png" alt="shape">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 (Active) -->
+                            <div class="col-xl-4 col-md-6 col-12 wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.3s">
+                                <div class="trending-courses1__card-wrap trending-courses1__card-wrap--active">
+                                    <div class="trending-courses1__card trending-courses1__card--active">
+                                        <div class="trending-courses1__card-top">
+                                            <div class="trending-courses1__card-icon">
+                                                <img src="assets/images/courses/courses-icon1_2.png"
+                                                    alt="Instructor Icon">
+                                            </div>
+                                            <div class="trending-courses1__card-thumb">
+                                                <img src="assets/images/courses/course-thumb1_2.png"
+                                                    alt="Instructor Training">
+                                            </div>
+                                        </div>
+                                        <div class="trending-courses1__card-content">
+                                            <h3 class="trending-courses1__card-title">Instructor Training</h3>
+                                            <p class="trending-courses1__card-description">Refresh your skill, our team
+                                                experienced instructors will guide you every step of the way. Our com
+                                                prehensive ..</p>
+                                        </div>
+                                    </div>
+                                    <a href="course-details.html"
+                                        class="trending-courses1__card-button trending-courses1__card-button--active">
+                                        <span class="trending-courses1__btn-label">
+                                            <span class="trending-courses1__btn-text">MORE DETAILS</span>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </span>
+                                        <span class="trending-courses1__btn-chevrons">
+                                            <img src="assets/images/courses/btn-shape.png" alt="shape">
+                                            <img src="assets/images/courses/btn-shape2.png" alt="shape">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="col-xl-4 col-md-6 col-12 wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.4s">
+                                <div class="trending-courses1__card-wrap">
+                                    <div class="trending-courses1__card">
+                                        <div class="trending-courses1__card-top">
+                                            <div class="trending-courses1__card-icon">
+                                                <img src="assets/images/courses/courses-icon1_3.png" alt="Video Icon">
+                                            </div>
+                                            <div class="trending-courses1__card-thumb">
+                                                <img src="assets/images/courses/course-thumb1_3.png"
+                                                    alt="Video Classes">
+                                            </div>
+                                        </div>
+                                        <div class="trending-courses1__card-content">
+                                            <h3 class="trending-courses1__card-title">Video Classes</h3>
+                                            <p class="trending-courses1__card-description">Refresh your skill, our team
+                                                experienced instructors will guide you every step of the way. Our com
+                                                prehensive ..</p>
+                                        </div>
+                                    </div>
+                                    <a href="course-details.html" class="trending-courses1__card-button">
+                                        <span class="trending-courses1__btn-label">
+                                            <span class="trending-courses1__btn-text">MORE DETAILS</span>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </span>
+                                        <span class="trending-courses1__btn-chevrons">
+                                            <img src="assets/images/courses/btn-shape.png" alt="shape">
+                                            <img src="assets/images/courses/btn-shape2.png" alt="shape">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <div class="about1 section-padding fix">
+            <div class="container">
+                <div class="row gy-5 d-flex justify-content-between">
+                    <div class="col-xl-6">
+                        <div class="about1__left">
+                            <div class="about1__left-thumb  wow fadeInLeft" data-wow-delay="0.3s">
+                                <img src="assets/images/about/about-thumb1_1.png" alt="AboutThumb">
+                            </div>
+                            <div class="about1__left-thumb2">
+                                <div class="main-img ">
+                                    <img src="assets/images/about/about-thumb1_2.png" alt="Shape">
+                                </div>
+                            </div>
+                            <div class="shape">
+                                <img src="assets/images/about/about-thumb-shape1_1.png" alt="Shape">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 ps-xl-5">
+                        <div class="about1__right">
+                            <div class="section-top text-start wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.2s">
+                                <span class="section-top__subtitle"> &gt;&gt;&gt; <span class="text">ABOUT US</span>
+                                </span>
+                                <h2 class="section-top__title mb-3">Safety in Every Wisdom in Every Mile</h2>
+                                <p class="section-top__description">Whether you're a first-time driver or looking to
+                                    refresh your skills, our team
+                                    of experienced instructors will guide you every step of the way. Our com
+                                    prehensive courses are designed to ..</p>
+                            </div>
+
+                            <div class="about1__right-feature">
+                                <div class="about1__right-featurethumb">
+                                    <img src="assets/images/about/about-car-thumb1_1.png" alt="Shape">
+                                </div>
+                                <div class="about1__right-featurecontent">
+                                    <div class="item">
+                                        <img src="assets/images/about/about-sign-icon.png" alt="Sign Icon">
+                                        <p class="feature-content">
+                                            Flexible class schedules
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/images/about/about-sign-icon.png" alt="Sign Icon">
+                                        <p class="feature-content">
+                                            Experienced, certified instructors
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/images/about/about-sign-icon.png" alt="Sign Icon">
+                                        <p class="feature-content">
+                                            Experienced, certified instructors
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="about1__right-bottom">
+                                <div class="item">
+                                    <div class="icon"><img src="assets/images/about/about-icon1_1.png" alt="icon"></div>
+                                    <div class="title">Award Wining
+                                        Time</div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon"><img src="assets/images/about/about-icon1_2.png" alt="icon"></div>
+                                    <div class="title">Higest Success
+                                        Rates</div>
+                                </div>
+                            </div>
+
+                            <a href="pricing.html" class="theme__btn">
+                                <span class="theme__btn-text">Get Enrolled</span>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="theme__btn-shape">
+                                    <img src="assets/images/shape/btn-shape.png" alt="shape">
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Courses2 Slider Section -->
+        <section class="courses2 section-padding">
+            <div class="container">
+                <div class="section-top text-start wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <div class="row gy-3">
+                        <div class="col-lg-8">
+                            <span class="section-top__subtitle"> &gt;&gt;&gt; TRENDING COURSES &lt;&lt;&lt; </span>
+                            <h2 class="section-top__title">Popular Driving Courses</h2>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="courses2__nav d-flex justify-content-lg-end">
+                                <button class="courses2__nav-btn courses2__nav-btn--next courses2-slider__next">
+                                    <i class="fa-solid fa-arrow-left-long"></i>
+                                </button>
+                                <button class="courses2__nav-btn courses2__nav-btn--prev courses2-slider__prev">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper courses2-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="courses2__card">
+                                <div class="courses2__card-inner">
+                                    <div class="courses2__card-thumb">
+                                        <img src="assets/images/courses/course-thumb2_1.png" alt="Defensive Driving">
+                                        <div class="courses2__card-price">
+                                            <span class="courses2__card-price-amount">$45</span>
+                                            <span class="courses2__card-price-label">Per Person</span>
+                                        </div>
+                                    </div>
+                                    <div class="courses2__card-content">
+                                        <div class="courses2__card-meta">
+                                            <div class="meta-item__wrap">
+                                                <div class="meta-item">
+                                                    <i class="fa-solid fa-chart-simple"></i>
+                                                    <span>Intermediate</span>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <i class="fa-regular fa-clock"></i>
+                                                    <span>5 Weeks</span>
+                                                </div>
+                                            </div>
+
+                                            <a href="course-details.html" class="courses2__card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </a>
+                                        </div>
+                                        <h3 class="courses2__card-title">Defensive Driving Course</h3>
+                                        <p class="courses2__card-desc">Experienced instructors will guides you to every
+                                            step of the way. Our com ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="courses2__card">
+                                <div class="courses2__card-inner">
+                                    <div class="courses2__card-thumb">
+                                        <img src="assets/images/courses/course-thumb2_2.png" alt="Beginner Driving">
+                                        <div class="courses2__card-price">
+                                            <span class="courses2__card-price-amount">$48</span>
+                                            <span class="courses2__card-price-label">Per Person</span>
+                                        </div>
+                                    </div>
+                                    <div class="courses2__card-content">
+                                        <div class="courses2__card-meta">
+                                            <div class="meta-item__wrap">
+                                                <div class="meta-item">
+                                                    <i class="fa-solid fa-chart-simple"></i>
+                                                    <span>Intermediate</span>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <i class="fa-regular fa-clock"></i>
+                                                    <span>5 Weeks</span>
+                                                </div>
+                                            </div>
+
+                                            <a href="course-details.html" class="courses2__card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </a>
+                                        </div>
+                                        <h3 class="courses2__card-title">Beginner Driving Course</h3>
+                                        <p class="courses2__card-desc">Experienced instructors will guides you to every
+                                            step of the way. Our com ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="courses2__card">
+                                <div class="courses2__card-inner">
+                                    <div class="courses2__card-thumb">
+                                        <img src="assets/images/courses/course-thumb2_1.png" alt="Advanced Driving">
+                                        <div class="courses2__card-price">
+                                            <span class="courses2__card-price-amount">$55</span>
+                                            <span class="courses2__card-price-label">Per Person</span>
+                                        </div>
+                                    </div>
+                                    <div class="courses2__card-content">
+                                        <div class="courses2__card-meta">
+                                            <div class="meta-item__wrap">
+                                                <div class="meta-item">
+                                                    <i class="fa-solid fa-chart-simple"></i>
+                                                    <span>Intermediate</span>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <i class="fa-regular fa-clock"></i>
+                                                    <span>5 Weeks</span>
+                                                </div>
+                                            </div>
+
+                                            <a href="course-details.html" class="courses2__card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </a>
+                                        </div>
+                                        <h3 class="courses2__card-title">Advanced Driving Course</h3>
+                                        <p class="courses2__card-desc">Experienced instructors will guides you to every
+                                            step of the way. Our com ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="courses2__card">
+                                <div class="courses2__card-inner">
+                                    <div class="courses2__card-thumb">
+                                        <img src="assets/images/courses/course-thumb2_2.png" alt="Fast Track Driving">
+                                        <div class="courses2__card-price">
+                                            <span class="courses2__card-price-amount">$50</span>
+                                            <span class="courses2__card-price-label">Per Person</span>
+                                        </div>
+                                    </div>
+                                    <div class="courses2__card-content">
+                                        <div class="courses2__card-meta">
+                                            <div class="meta-item__wrap">
+                                                <div class="meta-item">
+                                                    <i class="fa-solid fa-chart-simple"></i>
+                                                    <span>Intermediate</span>
+                                                </div>
+                                                <div class="meta-item">
+                                                    <i class="fa-regular fa-clock"></i>
+                                                    <span>5 Weeks</span>
+                                                </div>
+                                            </div>
+
+                                            <a href="course-details.html" class="courses2__card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </a>
+                                        </div>
+                                        <h3 class="courses2__card-title">Fast Track Driving Course</h3>
+                                        <p class="courses2__card-desc">Experienced instructors will guides you to every
+                                            step of the way. Our com ..</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Service Section -->
+        <section class="service-section section-padding pt-0">
+            <div class="container">
+                <div class="section-top text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <span class="section-top__subtitle"> &gt;&gt;&gt; GET WORLD-CLASS CAR &lt;&lt;&lt; </span>
+                    <h2 class="section-top__title">Services Customized for You</h2>
+                </div>
+
+                <div class="swiper service-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_1.jpg" alt="Service 1"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Mercedes-Benz</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_2.jpg" alt="Service 2"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Mini Cooper</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_3.jpg" alt="Service 3"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Honda Ridgeline</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 (Duplicate) -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_1.jpg" alt="Service 1"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Mercedes-Benz</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 5 (Duplicate) -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_2.jpg" alt="Service 2"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Mini Cooper</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 6 (Duplicate) -->
+                        <div class="swiper-slide">
+                            <div class="service-card">
+                                <div class="service-card__image-box">
+                                    <img src="assets/images/services/services-thumb1_3.jpg" alt="Service 3"
+                                        class="service-card__image">
+                                </div>
+                                <div class="service-card__content-wrapper">
+                                    <div class="service-card__content">
+                                        <div class="service-card__info">
+                                            <span class="service-card__subtitle">AUTOMATIC</span>
+                                            <h3 class="service-card__title">Honda Ridgeline</h3>
+                                        </div>
+                                        <a href="pricing.html" class="service-card__btn">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="service-slider__controls">
+                        <div class="service-slider__prev"><i class="fa-solid fa-chevron-left"></i></div>
+                        <div class="service-slider__pagination"></div>
+                        <div class="service-slider__next"><i class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Benefits Section -->
+        <section class="benefits1">
+            <div class="container-fluid">
+                <div class="benefits1__wrap section-padding fix">
+                    <div class="benefits1__bg">
+                        <img src="assets/images/benefit/benefit-bg-thumb1_1.png" alt="background">
+                    </div>
+                    <div class="benefits1__shape benefits1__shape-1">
+                        <img src="assets/images/benefit/benefit-shape1_1.png" alt="shape">
+                    </div>
+                    <div class="benefits1__shape benefits1__shape-2">
+                        <img src="assets/images/benefit/benefit-shape1_2.png" alt="shape">
+                    </div>
+                    <div class="benefits1__shape benefits1__shape-3">
+                        <img src="assets/images/benefit/benefit-shape1_3.png" alt="shape">
+                    </div>
+                    <div class="container">
+                        <div class="benefits1__content-top">
+                            <div class="row align-items-end justify-content-between">
+                                <div class="col-lg-6 pe-xl-5 wow animate__animated animate__fadeInUp"
+                                    data-wow-delay="0.2s">
+                                    <span class="section-top__subtitle benefits1__subtitle">&gt;&gt;&gt; OUR BENEFITS
+                                        &lt;&lt;&lt; </span>
+                                    <h2 class="section-top__title benefits1__title">Improve Your Driving Skills To Know
+                                        This
+                                        Activities</h2>
+                                </div>
+                                <div class="col-lg-6 ps-xl-5 wow animate__animated animate__fadeInUp"
+                                    data-wow-delay="0.4s">
+                                    <p class="benefits1__description">Whether you're a first-time driver or looking to
+                                        refresh
+                                        your skills, our team of experienced instructors will guide you every step of
+                                        the way.
+                                        Our com prehensive courses are designed to ..</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-start">
+                            <div class="col-lg-7 wow fadeInLeft" data-wow-delay="0.2s">
+                                <div class="benefits1__image-box">
+                                    <img src="assets/images/benefit/benefit-thumb1_1.png" alt="White Car"
+                                        class="benefits1__car-img">
+                                    <div class="benefits1__cta-box">
+                                        <div class="icon">
+                                            <img src="assets/images/benefit/benefit-card-icon1_1.png" alt="icon">
+                                        </div>
+                                        <div class="text">
+                                            <p>We're near to your locations. <br> Start learn driving course</p>
+
+
+                                            <a href="pricing.html" class="theme__btn">
+                                                <span class="theme__btn-text">START LEARNING</span>
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                                <span class="theme__btn-shape">
+                                                    <img src="assets/images/shape/btn-shape.png" alt="shape">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="benefits1__card">
+                                    <ul class="benefits1__list">
+                                        <li>
+                                            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                            Don't over speeding
+                                        </li>
+                                        <li class="active">
+                                            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                            Be extra careful in bad weather
+                                        </li>
+                                        <li>
+                                            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                            Don't follow too closely
+                                        </li>
+                                        <li>
+                                            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                            Wear your seat belt
+                                        </li>
+                                        <li>
+                                            <span class="check-icon"><i class="fa-solid fa-check"></i></span>
+                                            Avoid all distractions
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team1 section-padding">
+            <div class="container">
+                <div class="team1__content-top">
+                    <div class="row gy-3 align-items-end">
+                        <div class="col-lg-8">
+                            <div class="section-top mb-0  text-start wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.2s">
+                                <span class="team1__subtitle"> &gt;&gt;&gt; BEST INSTRUCTORS &lt;&lt;&lt; </span>
+                                <h2 class="team1__title">Our Qualified Instructors</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <div class="team1__header-btn wow animate__animated animate__fadeInUp"
+                                data-wow-delay="0.3s">
+                                <a href="pricing.html" class="theme__btn">
+                                    <span class="theme__btn-text">GET ENROLLED</span>
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                    <span class="theme__btn-shape">
+                                        <img src="assets/images/shape/btn-shape.png" alt="shape">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <!-- Team Member 1 -->
+                    <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="team1__card">
+                            <div class="team1__card-thumb">
+                                <img src="assets/images/team/team-thumb1_1.png" alt="Albert Da Silva">
+                                <div class="team1__card-social">
+                                    <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team1__card-content">
+                                <span class="designation">CEO, of Founder</span>
+                                <h3 class="name">Savnah Nuyen</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="team1__card">
+                            <div class="team1__card-thumb">
+                                <img src="assets/images/team/team-thumb1_2.png" alt="Albert Da Silva">
+                                <div class="team1__card-social">
+                                    <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team1__card-content">
+                                <span class="designation">Test Examiner</span>
+                                <h3 class="name">Albert Da Silva</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="team1__card">
+                            <div class="team1__card-thumb">
+                                <img src="assets/images/team/team-thumb1_3.png" alt="Albert Da Silva">
+                                <div class="team1__card-social">
+                                    <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team1__card-content">
+                                <span class="designation">SENIOR INSTRUCTOR</span>
+                                <h3 class="name">Henry Joseph</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Member 4 -->
+                    <div class="col-lg-3 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="team1__card">
+                            <div class="team1__card-thumb">
+                                <img src="assets/images/team/team-thumb1_4.png" alt="Albert Da Silva">
+                                <div class="team1__card-social">
+                                    <a href="contact.html"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href="contact.html"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="team1__card-content">
+                                <span class="designation">CEO, of Founder</span>
+                                <h3 class="name">Miskat Sovaha</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <div class="cta1 section-padding pt-0">
+            <div class="container">
+                <div class="row gx-4 gy-5">
+                    <!-- Card 1: Subscribe -->
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="cta1__card">
+                            <div class="cta1__card-thumb">
+                                <img src="assets/images/cta/cta-thumb1_1.png" alt="Subscribe">
+                            </div>
+                            <div class="cta1__card-overlay">
+                                <div class="card-icon">
+                                    <img src="assets/images/cta/cta-icon1_1.png" alt="Mail Icon">
+                                </div>
+                                <h3 class="card-title">Don't Miss Anything</h3>
+                                <span class="card-subtitle">Subscribe to get offers &amp; updates</span>
+                                <div class="card-form">
+                                    <input type="email" placeholder="EMAIL ADDRESS">
+                                    <button class="submit-btn" aria-label="Subscribe">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Traffic Signs -->
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="cta1__card">
+                            <div class="cta1__card-thumb">
+                                <img src="assets/images/cta/cta-thumb1_2.png" alt="Traffic Signs">
+                            </div>
+                            <div class="cta1__card-overlay">
+                                <div class="card-icon">
+                                    <img src="assets/images/cta/cta-icon1_2.png" alt="Traffic Icon">
+                                </div>
+                                <h3 class="card-title">Learn Traffic Signs</h3>
+                                <span class="card-subtitle">Follow the rules while you drive</span>
+                                <div class="card-download">
+                                    <span class="download-label">DOWNLOAD PDF</span>
+                                    <a href="contact.html" class="download-btn" aria-label="Download">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section section-padding">
+            <div class="container">
+                <div class="section-top text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <span class="section-top__subtitle"> &gt;&gt;&gt; TRENDING COURSES &lt;&lt;&lt; </span>
+                    <h2 class="section-top__title">Popular Driving Courses</h2>
+                </div>
+
+                <div class="row gy-5">
+                    <!-- Pricing Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="pricing-card">
+                            <div class="pricing-card__badge">POPULAR</div>
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__price-currency">$</span>
+                                <span class="pricing-card__price-amount">49</span>
+                                <div class="pricing-card__price-details">
+                                    <span class="pricing-card__price-decimal">. 99</span>
+                                    <span class="pricing-card__price-sub">Per Course</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card__package">
+                                <h3 class="pricing-card__title">Silver Package</h3>
+                                <p class="pricing-card__text">The driving instructors association offers a diverse range
+                                </p>
+                            </div>
+                            <ul class="pricing-card__list">
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 60 mins
+                                    driving lesson</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Car rental
+                                    for road test</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 7 hour pre
+                                    licensing course</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Additional
+                                    time available</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 2 hours
+                                    highway lesson</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card__button-wrap">
+                            <a href="contact.html" class="pricing-card__btn">Choose Packages <i
+                                    class="fa-solid fa-arrow-right"></i>
+                                <img class="btn-shape" src="assets/images/pricing/pricing-btn-shape1.png"
+                                    alt="bg-shape"></a>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 2 (Dark) -->
+                    <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="pricing-card pricing-card--dark">
+                            <div class="pricing-card__bg">
+                                <img src="assets/images/pricing/pricing-bg-shape.png" alt="bg-shape">
+                            </div>
+                            <div class="pricing-card__badge">POPULAR</div>
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__price-currency">$</span>
+                                <span class="pricing-card__price-amount">59</span>
+                                <div class="pricing-card__price-details">
+                                    <span class="pricing-card__price-decimal">. 99</span>
+                                    <span class="pricing-card__price-sub">Per Course</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card__package">
+                                <h3 class="pricing-card__title">Golden Package</h3>
+                                <p class="pricing-card__text">The driving instructors association offers a diverse range
+                                </p>
+                            </div>
+                            <ul class="pricing-card__list">
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 60 mins
+                                    driving lesson</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Car rental
+                                    for road test</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 7 hour pre
+                                    licensing course</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Additional
+                                    time available</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 2 hours
+                                    highway lesson</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card__button-wrap">
+                            <a href="contact.html" class="pricing-card__btn">Choose Packages <i
+                                    class="fa-solid fa-arrow-right"></i>
+                                <img class="btn-shape" src="assets/images/pricing/pricing-btn-shape2.png"
+                                    alt="bg-shape"></a>
+
+                        </div>
+                    </div>
+
+                    <!-- Pricing Card 3 -->
+                    <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                        <div class="pricing-card">
+                            <div class="pricing-card__badge">POPULAR</div>
+                            <div class="pricing-card__header">
+                                <span class="pricing-card__price-currency">$</span>
+                                <span class="pricing-card__price-amount">69</span>
+                                <div class="pricing-card__price-details">
+                                    <span class="pricing-card__price-decimal">. 99</span>
+                                    <span class="pricing-card__price-sub">Per Course</span>
+                                </div>
+                            </div>
+                            <div class="pricing-card__package">
+                                <h3 class="pricing-card__title">Platinum Package</h3>
+                                <p class="pricing-card__text">The driving instructors association offers a diverse range
+                                </p>
+                            </div>
+                            <ul class="pricing-card__list">
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 60 mins
+                                    driving lesson</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Car rental
+                                    for road test</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 7 hour pre
+                                    licensing course</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> Additional
+                                    time available</li>
+                                <li class="pricing-card__list-item"><i class="fa-solid fa-circle-check"></i> 2 hours
+                                    highway lesson</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card__button-wrap">
+                            <a href="contact.html" class="pricing-card__btn">Choose Packages <i
+                                    class="fa-solid fa-arrow-right"></i>
+                                <img class="btn-shape" src="assets/images/pricing/pricing-btn-shape1.png"
+                                    alt="bg-shape"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="testimonial1">
+            <div class="container">
+
+                <div class="section-top text-start">
+                    <div class="row gy-4 d-flex justify-content-between">
+                        <div class="col-md-5 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                            <span class="section-top__subtitle dark"> &gt;&gt;&gt; CLIENTS FEEDBACK &lt;&lt;&lt; </span>
+                            <h2 class="section-top__title dark">See What Students are Talking about Us</h2>
+                        </div>
+                        <div class="col-md-5 d-flex justify-content-md-end">
+                            <div class="testimonial1__nav">
+                                <button class="testimonial1__nav-btn testimonial1__nav-btn--prev">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </button>
+                                <button class="testimonial1__nav-btn testimonial1__nav-btn--next">
+                                    <i class="fa-solid fa-arrow-left-long"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-2 align-items-center">
+                    <!-- Left: Student Image -->
+                    <div class="col-xl-6 order-2 order-xl-1 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="testimonial1__student-img">
+                            <img src="assets/images/testimonial/testimonial-thumb1_1.png" alt="Student">
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="col-xl-6 order-1 order-xl-2 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="testimonial1__content">
+
+                            <div class="testimonial1__slider swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Testimonial 1 -->
+                                    <div class="testimonial1__card swiper-slide">
+                                        <div class="testimonial1__card-body">
+                                            <div class="quote-icon">
+                                                <img src="assets/images/testimonial/testimonial-quote1_1.png"
+                                                    alt="Quote">
+                                            </div>
+                                            <p class="text">
+                                                Whether you're a first-time driver or looking to refresh your skills,
+                                                our team
+                                                of experienced instructor will guide you every step of the way com
+                                                prehensive
+                                                of courses are designed to experienced instructors will guides ..
+                                            </p>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="score">5.0 OUT OF 4.0</span>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial1__card-user">
+                                            <div class="avatar">
+                                                <img src="assets/images/testimonial/testimonial-user1_1.png" alt="User">
+                                            </div>
+                                            <div class="info">
+                                                <span class="role">DRIVING STUDENT</span>
+                                                <h3 class="name">Michel Fredrick</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Testimonial 2 (Alternate) -->
+                                    <div class="testimonial1__card testimonial1__card--alt swiper-slide">
+                                        <div class="testimonial1__card-body">
+                                            <div class="quote-icon">
+                                                <img src="assets/images/testimonial/testimonial-quote1_1.png"
+                                                    alt="Quote">
+                                            </div>
+                                            <p class="text">
+                                                Whether you're a first-time driver or looking to refresh your skills,
+                                                our team
+                                                of experienced instructor will guide you every step of the way com
+                                                prehensive
+                                                of courses are designed to experienced instructors will guides ..
+                                            </p>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="score">5.0 OUT OF 4.0</span>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial1__card-user">
+                                            <div class="avatar">
+                                                <img src="assets/images/testimonial/testimonial-user1_1.png" alt="User">
+                                            </div>
+                                            <div class="info">
+                                                <span class="role">DRIVING STUDENT</span>
+                                                <h3 class="name">Bret Denel Roy</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial 1 -->
+                                    <div class="testimonial1__card swiper-slide">
+                                        <div class="testimonial1__card-body">
+                                            <div class="quote-icon">
+                                                <img src="assets/images/testimonial/testimonial-quote1_1.png"
+                                                    alt="Quote">
+                                            </div>
+                                            <p class="text">
+                                                Whether you're a first-time driver or looking to refresh your skills,
+                                                our team
+                                                of experienced instructor will guide you every step of the way com
+                                                prehensive
+                                                of courses are designed to experienced instructors will guides ..
+                                            </p>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="score">5.0 OUT OF 4.0</span>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial1__card-user">
+                                            <div class="avatar">
+                                                <img src="assets/images/testimonial/testimonial-user1_1.png" alt="User">
+                                            </div>
+                                            <div class="info">
+                                                <span class="role">DRIVING STUDENT</span>
+                                                <h3 class="name">Michel Fredrick</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Testimonial 2 (Alternate) -->
+                                    <div class="testimonial1__card testimonial1__card--alt swiper-slide">
+                                        <div class="testimonial1__card-body">
+                                            <div class="quote-icon">
+                                                <img src="assets/images/testimonial/testimonial-quote1_1.png"
+                                                    alt="Quote">
+                                            </div>
+                                            <p class="text">
+                                                Whether you're a first-time driver or looking to refresh your skills,
+                                                our team
+                                                of experienced instructor will guide you every step of the way com
+                                                prehensive
+                                                of courses are designed to experienced instructors will guides ..
+                                            </p>
+                                            <div class="rating">
+                                                <div class="stars">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </div>
+                                                <span class="score">5.0 OUT OF 4.0</span>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial1__card-user">
+                                            <div class="avatar">
+                                                <img src="assets/images/testimonial/testimonial-user1_1.png" alt="User">
+                                            </div>
+                                            <div class="info">
+                                                <span class="role">DRIVING STUDENT</span>
+                                                <h3 class="name">Bret Denel Roy</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Marquee Section -->
+        <div class="marquee1">
+            <div class="marquee1__wrapper">
+                <!-- Content set 1 -->
+                <div class="marquee1__content">
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_1.png"
+                            alt="Marquee Logo 1">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_2.png"
+                            alt="Marquee Logo 2">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_3.png"
+                            alt="Marquee Logo 3">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_4.png"
+                            alt="Marquee Logo 4">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_5.png"
+                            alt="Marquee Logo 5">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_6.png"
+                            alt="Marquee Logo 6">
+                    </div>
+                </div>
+                <!-- Content set 2 (Duplicate for loop) -->
+                <div class="marquee1__content">
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_1.png"
+                            alt="Marquee Logo 1">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_2.png"
+                            alt="Marquee Logo 2">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_3.png"
+                            alt="Marquee Logo 3">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_4.png"
+                            alt="Marquee Logo 4">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_5.png"
+                            alt="Marquee Logo 5">
+                    </div>
+                    <div class="marquee1__logo"><img src="assets/images/marquee/marquee-logo1_6.png"
+                            alt="Marquee Logo 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <section id="blog1" class="blog1 section-padding">
+            <div class="container">
+                <div class="section-top wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <span class="section-top__subtitle">
+                        &gt;&gt;&gt; News &amp; Updates &lt;&lt;&lt;
+                    </span>
+                    <h2 class="section-top__title">Latest News from the blog</h2>
+                </div>
+
+                <div class="row gy-4">
+                    <!-- Blog Card 1 -->
+                    <div class="col-xl-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="blog1__card">
+                            <div class="blog1__card-thumb">
+                                <img src="assets/images/blog/blog-thumb1_1.jpg"
+                                    alt="Why auto driving will help you to pass">
+                            </div>
+                            <div class="blog1__card-content">
+                                <div class="blog1__card-top">
+                                    <div class="blog1__card-date">
+                                        24 <span>Jun</span>
+                                    </div>
+                                    <div class="blog1__card-right">
+                                        <div class="blog1__card-meta">
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-solid fa-user"></i>
+                                                <span>By : Admin</span>
+                                            </div>
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-regular fa-comments"></i>
+                                                <span>Comments(2)</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog1__card-title">Why auto driving will help you to pass</div>
+                                    </div>
+                                </div>
+                                <div class="blog1__card-bottom">
+                                    <div class="blog1__card-profile">
+                                        <div class="blog1__card-profilethumb">
+                                            <img src="assets/images/blog/blog-user1_1.jpg" alt="Michel Fredrick">
+                                        </div>
+                                        <div class="blog1__card-profileinfo">
+                                            <div class="blog1__card-profiledesignation">Teacher</div>
+                                            <div class="blog1__card-profilename">Michel Fredrick</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog1__card-readmore">
+                                        <a href="blog-details.html"><i class="fa-solid fa-arrow-right-long"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 2 -->
+                    <div class="col-xl-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <div class="blog1__card">
+                            <div class="blog1__card-thumb">
+                                <img src="assets/images/blog/blog-thumb1_2.jpg"
+                                    alt="How to overcome your fear of driving">
+                            </div>
+                            <div class="blog1__card-content">
+                                <div class="blog1__card-top">
+                                    <div class="blog1__card-date">
+                                        18 <span>Jun</span>
+                                    </div>
+                                    <div class="blog1__card-right">
+                                        <div class="blog1__card-meta">
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-solid fa-user"></i>
+                                                <span>By : Admin</span>
+                                            </div>
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-regular fa-comments"></i>
+                                                <span>Comments(2)</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog1__card-title">How to overcome your fear of driving</div>
+                                    </div>
+                                </div>
+                                <div class="blog1__card-bottom">
+                                    <div class="blog1__card-profile">
+                                        <div class="blog1__card-profilethumb">
+                                            <img src="assets/images/blog/blog-user1_1.jpg" alt="Michel Fredrick">
+                                        </div>
+                                        <div class="blog1__card-profileinfo">
+                                            <div class="blog1__card-profiledesignation">Teacher</div>
+                                            <div class="blog1__card-profilename">Michel Fredrick</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog1__card-readmore">
+                                        <a href="blog-details.html"><i class="fa-solid fa-arrow-right-long"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 3 -->
+                    <div class="col-xl-4 col-md-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="blog1__card">
+                            <div class="blog1__card-thumb">
+                                <img src="assets/images/blog/blog-thumb1_3.jpg"
+                                    alt="Lighting the way with guest daniel stern">
+                            </div>
+                            <div class="blog1__card-content">
+                                <div class="blog1__card-top">
+                                    <div class="blog1__card-date">
+                                        03 <span>Jun</span>
+                                    </div>
+                                    <div class="blog1__card-right">
+                                        <div class="blog1__card-meta">
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-solid fa-user"></i>
+                                                <span>By : Admin</span>
+                                            </div>
+                                            <div class="blog1__card-metaitem">
+                                                <i class="fa-regular fa-comments"></i>
+                                                <span>Comments(2)</span>
+                                            </div>
+                                        </div>
+                                        <div class="blog1__card-title">Lighting the way with guest daniel stern</div>
+                                    </div>
+                                </div>
+                                <div class="blog1__card-bottom">
+                                    <div class="blog1__card-profile">
+                                        <div class="blog1__card-profilethumb">
+                                            <img src="assets/images/blog/blog-user1_1.jpg" alt="Michel Fredrick">
+                                        </div>
+                                        <div class="blog1__card-profileinfo">
+                                            <div class="blog1__card-profiledesignation">Teacher</div>
+                                            <div class="blog1__card-profilename">Michel Fredrick</div>
+                                        </div>
+                                    </div>
+                                    <div class="blog1__card-readmore">
+                                        <a href="blog-details.html"><i class="fa-solid fa-arrow-right-long"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!--  FOOTER 1  -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <!--  Top Row: 4 Columns  -->
+            <div class="row d-flex justify-content-between site-footer__top gy-3 gy-md-5">
+
+                <!-- Column 1: Let's Join Us -->
+                <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <h2 class="site-footer__heading">Let's<br>Join Us</h2>
+                    <p class="site-footer__desc">Refresh your skill, our team of experience instructors will guide you
+                        every step of way. Our com prehensive ..</p>
+                </div>
+
+                <!-- Column 2: Our Courses -->
+                <div class="col-12 col-md-6 col-lg-3 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <h3 class="site-footer__widget-title">Our Courses</h3>
+                    <ul class="site-footer__links">
+                        <li class="site-footer__link-item"><a href="pricing.html" class="site-footer__link">Defensive
+                                Driving</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="pricing.html" class="site-footer__link">Fast Track
+                                Driving</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="pricing.html" class="site-footer__link">Traffic
+                                Science</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="pricing.html" class="site-footer__link">Initial
+                                Driving
+                                Lesson</a></li>
+                        <li class="site-footer__link-item"><a href="pricing.html" class="site-footer__link">Beginner
+                                Driving</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Explore -->
+                <div class="col-12 col-md-6 col-lg-2 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <h3 class="site-footer__widget-title">Explore</h3>
+                    <ul class="site-footer__links">
+                        <li class="site-footer__link-item"><a href="about.html" class="site-footer__link">About Us</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="team.html" class="site-footer__link">Instructors</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="course.html" class="site-footer__link">Classic
+                                Course</a></li>
+                        <li class="site-footer__link-item"><a href="contact.html" class="site-footer__link">Road Safety
+                                Guide</a>
+                        </li>
+                        <li class="site-footer__link-item"><a href="contact.html" class="site-footer__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Gallery + Newsletter -->
+                <div class="col-12 col-md-6 col-lg-3 wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                    <h3 class="site-footer__widget-title">Gallery</h3>
+                    <div class="site-footer__gallery">
+                        <img src="assets/images/footer/footer-thumb1_1.png" alt="Gallery 1"
+                            class="site-footer__gallery-img">
+                        <img src="assets/images/footer/footer-thumb1_2.png" alt="Gallery 2"
+                            class="site-footer__gallery-img">
+                        <img src="assets/images/footer/footer-thumb1_3.png" alt="Gallery 3"
+                            class="site-footer__gallery-img">
+                    </div>
+                    <div class="site-footer__newsletter">
+                        <input type="email" class="site-footer__newsletter-input" placeholder="EMAIL ADDRESS">
+                        <button class="site-footer__newsletter-btn" aria-label="Subscribe">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Divider  -->
+            <hr class="site-footer__divider">
+
+            <!--  Bottom Row: Logo / Contact / Socials  -->
+            <div class="site-footer__bottom">
+
+                <!-- Logo -->
+                <div class="site-footer__logo">
+                    <img src="assets/images/logo/footer-logo.png" alt="Cdrive Logo">
+                </div>
+
+                <!-- Contact Info -->
+                <div class="site-footer__contact-info">
+                    <a href="tel:+923076806860" class="site-footer__contact">
+                        <span class="site-footer__contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        + 92 ( 307 ) 68 - 06860
+                    </a>
+                    <a href="mailto:needhelp@company.com" class="site-footer__contact">
+                        <span class="site-footer__contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        needhelp@company.com
+                    </a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="site-footer__socials">
+                    <a href="https://facebook.com/" target="_blank" class="site-footer__social-link"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="site-footer__social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://pinterest.com/" target="_blank" class="site-footer__social-link"
+                        aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="site-footer__social-link"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--  Copyright Bar  -->
+        <div class="site-footer__copyright-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="site-footer__copyright">© 2026 Cdrive School, All Right Reserved ||  Designed By Developer Nayem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Fonts: DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- jQuery CDN -->
+    <script src="../../code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- GSAP CDN -->
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- WOW.js CDN -->
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="../../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+
+</html>
